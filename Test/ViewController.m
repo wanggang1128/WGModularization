@@ -16,13 +16,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.view.backgroundColor = [UIColor yellowColor];
-    
-    NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:@"123", @"key", nil];
-//    NSString *str = dic[@"key1"];
-    long value = [dic[@"key"] longLongValue];
-    NSLog(@"---->>%ld", value);
+        
+    NSString *str = @"abcdefg";
+    //这里通过runtime拦截崩溃
+    NSString *subStr = [str substringToIndex:100];
+    NSLog(@"subStr:%@", subStr);
     
 }
 
