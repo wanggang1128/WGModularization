@@ -16,9 +16,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    self.view.backgroundColor = [UIColor yellowColor];
+    
+    NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:@"123", @"key", nil];
+//    NSString *str = dic[@"key1"];
+    long value = [dic[@"key"] longLongValue];
+    NSLog(@"---->>%ld", value);
+    
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
